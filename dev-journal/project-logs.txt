@@ -1,0 +1,7 @@
+Day 1 - Feb 15, 2026
+- Created Vite project.
+
+What I learned today:
+- From Vite, Parcel and rsbuild, do not use Parcel.  Vite is industry-standard but rsbuild is faster.
+- To create Vite project, use "npm create vite@latest ." with JavaScript + React Compiler flag.  To run use "npm run dev".
+- main.jsx vs App.jsx.  main.jsx is app entry point and App.jsx contains logic and structure.  main.jsx rarely modified.

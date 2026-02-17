@@ -1,7 +1,17 @@
 Day 1 - Feb 15, 2026
 - Created Vite project.
+- Created main navigation bar containing Home and Store pages.
 
 What I learned today:
 - From Vite, Parcel and rsbuild, do not use Parcel.  Vite is industry-standard but rsbuild is faster.
 - To create Vite project, use "npm create vite@latest ." with JavaScript + React Compiler flag.  To run use "npm run dev".
 - main.jsx vs App.jsx.  main.jsx is app entry point and App.jsx contains logic and structure.  main.jsx rarely modified.
+
+Day 2 - Feb 17, 2026
+- Created StoreGame component to hold info about each game
+
+What I learned today:
+- Component function takes only 1 parameter which is an array, i.e. func({ param1, param2 }) instead of func(param1, param2)
+- props are arguments in React and passed as follows: <StoreGame gameName="myFirstGame" gameVersion="1.0" />
+- Component names use PascalCase.  HTML elements use lowercase.
+- Displaying children using map() requires a unique key for each child.  For eg. <StoreGame key="1", gameName="myFirstGame" gameVersion="1.0" />

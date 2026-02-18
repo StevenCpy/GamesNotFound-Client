@@ -3,7 +3,10 @@ import games from '../data/games'
 
 function Store() {
     return (
-        <div>
+        <div style={{
+            display:"flex",
+            flexDirection: "column",
+        }}>
             {games.games.map(game =>
                 <StoreGame key={game.Id} gameName={game.gameName} gameVersion={game.gameVersion} author={game.author} coverImageName={game.coverImageName} />
             )}

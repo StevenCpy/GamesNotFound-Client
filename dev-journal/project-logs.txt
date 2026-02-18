@@ -22,3 +22,8 @@ Day 3 - Feb 18, 2026
 What I learned today:
 - public vs src folder.  public/ for files that are served as is while src/ for files tied to components, are optimized by the build tool and can be imported into code.
 For game cover images, better use public/ to reduce bundle size.
+- inline style field does not need quotes.  "display":"flex" works same as display:"flex"
+<div style={{
+    display:"flex",
+    flexDirection: "column"
+}}>

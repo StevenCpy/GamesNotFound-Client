@@ -5,7 +5,7 @@ function Store() {
     return (
         <div>
             {games.games.map(game =>
-                <StoreGame key={game.Id} gameName={game.gameName} gameVersion={game.gameVersion} author={game.author} />
+                <StoreGame key={game.Id} gameName={game.gameName} gameVersion={game.gameVersion} author={game.author} coverImageName={game.coverImageName} />
             )}
         </div>
     )

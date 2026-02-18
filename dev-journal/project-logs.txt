@@ -15,3 +15,10 @@ What I learned today:
 - props are arguments in React and passed as follows: <StoreGame gameName="myFirstGame" gameVersion="1.0" />
 - Component names use PascalCase.  HTML elements use lowercase.
 - Displaying children using map() requires a unique key for each child.  For eg. <StoreGame key="1", gameName="myFirstGame" gameVersion="1.0" />
+
+Day 3 - Feb 18, 2026
+- Added game cover image to games.
+
+What I learned today:
+- public vs src folder.  public/ for files that are served as is while src/ for files tied to components, are optimized by the build tool and can be imported into code.
+For game cover images, better use public/ to reduce bundle size.

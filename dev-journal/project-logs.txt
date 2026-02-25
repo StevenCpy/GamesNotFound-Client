@@ -33,3 +33,12 @@ Day 4 - Feb 20, 2026
 
 What I learned today:
 - Whitespace inside tags don't matter, and there's white space collapsing between text elements (i.e. only 1 whitespace counts).
+
+Day 5 - Feb 21, 2026
+- Added login link.
+
+What I learned today:
+- 3 ways to share variables:
+    1. file containing global variables.  Disadv: Updating variable value will not trigger UI update, as opposed to using useState().
+    2. lift state up.  Disadv: Prop drilling - Need to pass variables to child components, which is very bad for components with many nested intermediate children.
+    3. use context.

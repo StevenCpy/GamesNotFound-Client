@@ -9,4 +9,4 @@ If you're an employer, please see dev-journal if you're interested to see my pro
 
 This is a Vite project.  To run code locally, "npm run dev" inside frontend folder.  
 
-My code contains no AI-generated code.  I only used LLMs for general questions, for example "Best practice for src vs public folder?" or "How to iterate through components using map?"
+My code contains no AI-generated code.

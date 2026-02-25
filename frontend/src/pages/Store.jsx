@@ -1,4 +1,4 @@
-import StoreGame from '../components/storeGame'
+import StoreGame from '../components/StoreGame'
 import games from '../data/games'
 
 function Store() {

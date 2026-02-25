@@ -19,6 +19,7 @@ function Signup() {
 
     function handleSignUp() {
         // TODO -- add backend logic for checking if email and username are available
+        // TODO -- add email validation, email must follow regex
         // TODO -- add password validation, password must follow regex
         setSignedUp(true)
     }

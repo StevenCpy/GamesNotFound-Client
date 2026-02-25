@@ -8,7 +8,7 @@ function Signup() {
     const [signedUp, setSignedUp] = useState(false)
     
     const usernameMaxLength = 30
-    const emailMaxLength = 255
+    const emailMaxLength = 320
     const passwordMaxLength = 128
 
     function handleField(e, setField, fieldMaxLength) {
@@ -60,6 +60,7 @@ function Signup() {
                     Already have an account?{" "}
                     <Link to="/Login">Login</Link>
                 </span>
+                <div disabled={!signedUp}>Signed up successfully.  You can now login!</div>
 
 
 

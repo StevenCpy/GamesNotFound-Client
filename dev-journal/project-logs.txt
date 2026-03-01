@@ -1,4 +1,4 @@
-Day 1 - Feb 15, 2026
+Day 1
 - Created Vite project.
 - Created main navigation bar containing Home and Store pages.
 
@@ -7,7 +7,7 @@ What I learned today:
 - To create Vite project, use "npm create vite@latest ." with JavaScript + React Compiler flag.  To run use "npm run dev".
 - main.jsx vs App.jsx.  main.jsx is app entry point and App.jsx contains logic and structure.  main.jsx rarely modified.
 
-Day 2 - Feb 17, 2026
+Day 2
 - Created StoreGame component to hold info about each game
 
 What I learned today:
@@ -16,7 +16,7 @@ What I learned today:
 - Component names use PascalCase.  HTML elements use lowercase.
 - Displaying children using map() requires a unique key for each child.  For eg. <StoreGame key="1", gameName="myFirstGame" gameVersion="1.0" />
 
-Day 3 - Feb 18, 2026
+Day 3
 - Added game cover image to games.
 
 What I learned today:
@@ -28,13 +28,13 @@ For game cover images, better use public/ to reduce bundle size.
     flexDirection: "column"
 }}>
 
-Day 4 - Feb 20, 2026
+Day 4
 - Merged backend and frontend into single repo.
 
 What I learned today:
 - Whitespace inside tags don't matter, and there's white space collapsing between text elements (i.e. only 1 whitespace counts).
 
-Day 5 - Feb 21, 2026
+Day 5
 - Added login link.
 
 What I learned today:
@@ -46,9 +46,11 @@ What I learned today:
 - Import browserRouter, routes, route in App.jsx but import Link in pages that use links.
 - <div> vs <span>: <div> stacks elements vertically while <span> stacks elements horizontally.
 
-Day 6 - Feb 25, 2026
+Day 6
 - Added login and sign up pages.
 - Added logic to sign up button.
+- Added persistent message when signed up successful.
 
 What I learned today:
 - In button's onClick props, use handleClick instead of handleClick() as handleClick() runs the function immediately, returning the value of the function.
+- use e.preventDefault() to prevent form from reloading when submitting.

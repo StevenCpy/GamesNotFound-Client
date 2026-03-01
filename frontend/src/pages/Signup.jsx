@@ -17,10 +17,11 @@ function Signup() {
         }
     }
 
-    function handleSignUp() {
+    function handleSignUp(e) {
         // TODO -- add backend logic for checking if email and username are available
         // TODO -- add email validation, email must follow regex
         // TODO -- add password validation, password must follow regex
+        e.preventDefault()
         setSignedUp(true)
     }
 
@@ -60,9 +61,7 @@ function Signup() {
                     Already have an account?{" "}
                     <Link to="/Login">Login</Link>
                 </span>
-                <div disabled={!signedUp}>Signed up successfully.  You can now login!</div>
-
-
+                {signedUp && <div style={{ color:"green" }}>Signed up successfully.  You can now login!</div>}
 
             </div>
 

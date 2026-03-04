@@ -59,4 +59,4 @@ Day 7
 - Added password validator.
 
 What I learned today:
-- 'If' conditions with lower and upper bounds do not work like in Python.  'a' <= char <= 'z' is wrong.
+- 'If' conditions with lower and upper bounds do not work like in Python.  'a' <= char <= 'z' is wrong.  Instead, use ('a' <= char) && (char <= 'z')

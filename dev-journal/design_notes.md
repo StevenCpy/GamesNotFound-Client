@@ -1,17 +1,42 @@
-Frontend: React JS
+OVERALL ARCHITECTURE:
+Frontend (React) -> Backend (Python) containerized using Docker and hosted on AWS ECS -> Supabase database (for user auth)
+
+-------------------------------------------------------------------------
+
+FRONTEND: React JS
+
+Frontend design decision:
+I know React.
 Start with website, then create wrapper around website to make Desktop app
 Why? No download needed to see UI
 
-Backend: Django/Flask/FastAPI (Python)
+-------------------------------------------------------------------------
 
-Database: ???
+BACKEND: Django/Flask/FastAPI (Python)
+
+Backend design decision:
+Supabase (BaaS - Backend as a Service) provides cloud database and authentication.  Backend code can be removed and let frontend directly communicate with Supabase server.  We can get rid of user logins through backend using this service.  However, we have less control over score data, as users can send fake scores through the web console.
+
+-------------------------------------------------------------------------
+
+DATABASE: Use Supabase only for free-tier database to store user logins and game scores, but keep backend code.
+
+Database options:
+- Local-hosted database eg. SQLite.  Disadv: Every time database deployed, user data and scores erased
+- Cloud-hosted database:
+    - NoSQL document database eg. MongoDB (stores data in document format like JSON).
+    - SQL relational database.  Good for storing user logins and score for each game.
+        - PostgreSQL engine hosted on AWS RDS.  Disadv: Can be costly and AWS does not have feature to limit usage.
+        - Supabase-hosted PostgreSQL.  Good for Google Auth and has free tier that doesn't require providing credit card info.
+
+-------------------------------------------------------------------------
 
 Basic Features:
 - Sign up/Login
 - UI to allow browsing games
     - Personalized library for games that user added from Store
     - Store tab to browse games
-- Download games
+- Download games (allow users to play games directly on browser for now, since people reluctant to download)
 
 How to keep list of games
 Step 1 - Hard-coded array.  Disadv: Not scalable/cannot add, remove or update games on the fly.(current approach)

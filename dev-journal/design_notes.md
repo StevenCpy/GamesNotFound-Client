@@ -14,6 +14,13 @@ Why? No download needed to see UI
 
 BACKEND: Django/Flask/FastAPI (Python)
 
+Django: Steeper learning curve, Slower and heavyweight.  Overkill for small projects.  Might switch to Django later on when scaling.  Large projects.  Worth learning in the long run.
+Flask: Lightweight.  Slower than FastAPI.  Small projects.
+FastAPI: Quick to learn.
+
+https://blog.jetbrains.com/pycharm/2025/02/django-flask-fastapi/
+
+
 Backend design decision:
 Supabase (BaaS - Backend as a Service) provides cloud database and authentication.  Backend code can be removed and let frontend directly communicate with Supabase server.  We can get rid of user logins through backend using this service.
 Disadv:

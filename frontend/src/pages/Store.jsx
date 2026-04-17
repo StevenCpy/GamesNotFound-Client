@@ -1,4 +1,4 @@
-import StoreGame from '../components/StoreGame'
+import GameCard from '../components/GameCard'
 import games from '../data/games'
 
 function Store() {
@@ -8,7 +8,7 @@ function Store() {
             flexDirection: "column",
         }}>
             {games.games.map(game =>
-                <StoreGame key={game.Id} gameName={game.gameName} gameVersion={game.gameVersion} author={game.author} coverImageName={game.coverImageName} />
+                <GameCard key={game.Id} gameName={game.gameName} gameVersion={game.gameVersion} author={game.author} coverImageName={game.coverImageName} />
             )}
         </div>
     )

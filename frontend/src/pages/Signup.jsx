@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom'
 
 function Signup() {
     const [username, setUsername] = useState("")
-    const [email, setEmail] = useState("")
+    //const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [signedUp, setSignedUp] = useState(false)
     const [passwordWarning, setPasswordWarning] = useState(false)
     
     const usernameMaxLength = 30
-    const emailMaxLength = 320
+    //const emailMaxLength = 320
     const passwordMaxLength = 128
 
     function handleField(e, setField, fieldMaxLength) {

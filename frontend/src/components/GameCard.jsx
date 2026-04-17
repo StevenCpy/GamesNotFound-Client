@@ -1,4 +1,4 @@
-function StoreGame( {gameName, gameVersion, author, coverImageName} ) {
+function GameCard( {gameName, gameVersion, author, coverImageName} ) {
     return (
         <div style={{
             display:"flex",
@@ -23,4 +23,4 @@ function StoreGame( {gameName, gameVersion, author, coverImageName} ) {
     )
 }
 
-export default StoreGame
+export default GameCard

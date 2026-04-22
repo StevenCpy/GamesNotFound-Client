@@ -73,3 +73,9 @@ What I learned today:
 - Use dotenv Python library to load .env variables.
 - When creating a new virtual environment, select interpreter (Ctrl + Shift + P on vscode) to point to the Python interpreter of that venv.
 Otherwise imports will remain unresolved.
+
+Day 9
+- Created sign up and login APIs on server.
+
+What I learned today:
+- Both sign up and login use POST.  Login possible using GET but it's not safe as username and password would appear in URL.

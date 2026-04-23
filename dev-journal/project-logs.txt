@@ -60,3 +60,22 @@ Day 7
 
 What I learned today:
 - 'If' conditions with lower and upper bounds do not work like in Python.  'a' <= char <= 'z' is wrong.  Instead, use ('a' <= char) && (char <= 'z')
+
+Day 8
+- Added requirements.txt to allow consistent Python package installation during local developments and CI/CD dockerization.
+- Tested React client sending API request to fastAPI server locally.
+- Tested sending API request to Supabase using Supabase client Python library.
+
+What I learned today:
+- Server has to define CORS policies so that it allows receiving requests from defined addresses.
+- .gitignore can be defined in root directory - a separate one for each of frontend and backend is not needed.
+- Store sensitive variables like API keys in .env for local developments.  Sensitive variables stored differently on Github.
+- Use dotenv Python library to load .env variables.
+- When creating a new virtual environment, select interpreter (Ctrl + Shift + P on vscode) to point to the Python interpreter of that venv.
+Otherwise imports will remain unresolved.
+
+Day 9
+- Created sign up and login APIs on server.
+
+What I learned today:
+- Both sign up and login use POST.  Login possible using GET but it's not safe as username and password would appear in URL.

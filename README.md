@@ -1,7 +1,7 @@
 # GamesNotFound
 Personal project, definitely not a knock-off of Steam
 
-GOAL: Platform for playing simple user-generated games on the browser.
+<b>GOAL:</b> Platform for playing simple user-generated games on the browser.
 
 If you're an employer, please see dev-journal if you're interested to see my progress and my notes during development.
 

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-
-const SERVER_URL = "https://gamesnotfound-server.onrender.com"
+import SERVER_URL from '../data/server_variables'
 
 function Signup() {
     const [username, setUsername] = useState("")
@@ -21,6 +20,7 @@ function Signup() {
         }
     }
 
+    // send sign up request to server
     async function handleSignUpServer() {
         try {
             const response = await fetch(`${SERVER_URL}/signup`, {
@@ -36,7 +36,7 @@ function Signup() {
             const data = await response.json()
             return data
         } catch (error) {
-            console.error("Error calling API", error)
+            console.error("Error calling signup API", error)
             return {"status": "Fail", "details": "Error calling signup API"}
         }
     }

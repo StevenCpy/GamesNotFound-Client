@@ -6,41 +6,44 @@ import Store from './pages/Store'
 import Profile from './pages/Profile'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
-
+import { AuthContext } from './components/Context.jsx'
 
 function App() {
-  const [LoggedIn, setLoggedIn] = useState(false)
-  let username = "RandomUser"
+  const [currentUser, setCurrentUser] = useState(null)
 
   return (
-    <BrowserRouter>
-      <nav id="main-nav-bar">
-        <div style={{
-            display:"flex",
-            flexDirection: "row",
-        }}>
+    <AuthContext value={{ currentUser, setCurrentUser }}>
+      <BrowserRouter>
+        <nav id="main-nav-bar">
+          <div style={{
+              display:"flex",
+              flexDirection: "row",
+          }}>
+            <span style={{
+              display: "flex",
+              gap: "30px"
+            }}>
+              <Link to="/">GamesNotFound</Link>
+              <Link to="/Store">STORE</Link>
+            </span>
+            <span style={{ marginLeft:"auto" }}>
+            {currentUser ?
+              <Link to="/Profile">{currentUser}</Link> : <Link to="/Login">Login</Link>
+            }
+            </span>
 
-          <span>
-            <Link to="/">GamesNotFound</Link> | {" "}
-            <Link to="/Store">Store</Link>
-          </span>
-          <span style={{ marginLeft:"auto" }}>
-          {LoggedIn ?
-            <Link to="/Profile">{username}</Link> : <Link to="/Signup">Sign Up/Login</Link>
-          }
-          </span>
+          </div>
+        </nav>
 
-        </div>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/Store" element={ <Store /> } />
-        <Route path="/Profile" element={ <Profile /> } />
-        <Route path="/Signup" element={ <Signup /> } />
-        <Route path="/Login" element={ <Login /> } />
-      </Routes>
-    </BrowserRouter>
+        <Routes>
+          <Route path="/" element={ <Home /> } />
+          <Route path="/Store" element={ <Store /> } />
+          <Route path="/Profile" element={ <Profile /> } />
+          <Route path="/Signup" element={ <Signup /> } />
+          <Route path="/Login" element={ <Login /> } />
+        </Routes>
+      </BrowserRouter>
+    </AuthContext>
   )
 }
 

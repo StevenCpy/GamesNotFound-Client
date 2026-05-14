@@ -12,3 +12,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+#main-nav-bar a {
+  font-size: 150%;
+  color: white;
+  text-decoration: none;
+}

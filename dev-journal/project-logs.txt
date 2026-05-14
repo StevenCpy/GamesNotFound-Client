@@ -102,3 +102,19 @@ localStorage can be used for things like dark mode toggle state.
 HTTPOnly cookies are safe for storing JWT tokens.
 - Passwords stored on database can be read as-is if not encrypted.  A library like bcrypt can be used to encrypt the
 password so even database admin cannot make sense of it.  When logging in, same hash = same password.
+
+Day 12
+- Implemented functional login feature
+
+What I learned today:
+- "export default" allows importing without { } eg.
+export const AuthContext = createContext(null); allows import { AuthContext }
+const AuthContext = createContext(null); export default AuthContext; allows import AuthContext
+- Using `` is like using f-strings on Python.
+Python: f"This is {var1}"
+JS: `This is ${var1}`
+- Hooks can only be used instead components i.e. functions that return html
+- context
+-- Using contexts prevents prop-drilling
+-- Pass values to context eg. <AuthContext value = {{ currentUser, setCurrentUser }}> </AuthContext>
+Extracting specific variable is possible (Selective object destructuring) eg. const setCurrentUser = useContext(AuthContext)

@@ -22,7 +22,7 @@ function GameCard( {gameName, gameVersion, author, coverImageName} ) {
                 <div style={{ fontSize:"2.5rem", textAlign:"center" }}> <b>{ gameName }</b> </div>
                 <div> <b>VERSION: </b> { gameVersion } </div>
                 <div> <b>AUTHOR: </b> { author } </div>
-                <button disabled={!currentUser} onClick={ handleAddToLibrary }> + Add to Library </button>
+                <button disabled={!currentUser}> + Add to Library </button>
             </div>
         </div>
     )
